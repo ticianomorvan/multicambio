@@ -98,19 +98,26 @@ import { units } from "../data/units.json";
 		}
 	}
 
-	@media screen and (min-width: 500px) {
+	@media screen and (min-width: 400px) {
 		#logo-multicambio {
 			width: 24em;
 		}
 
 		section {
-			max-width: 48ch;
+			max-width: 36ch;
 		}
 	}
 
 	@media screen and (min-width: 720px) {
 		section {
 			max-width: 60ch;
+		}
+
+		ul {
+			display: grid;
+			justify-items: center;
+			align-items: center;
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 </style>
