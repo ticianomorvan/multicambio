@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+import UnitLogo from "../components/UnitLogo.astro";
+
+import { units } from "../data/units.json";
+---
+
+<Layout title="MultiCambio | Instituto San Carlos">
+	<main>
+		<section id="presentation">
+			<img
+				id="logo-multicambio"
+				src="/images/MC-LOGO.jpg"
+				alt="MultiCambio's logo"
+			/>
+			<p>
+				El <b>MultiCambio</b> es un proyecto institucional del colegio secundario
+				<a href="https://isc-mlgo.edu.ar" target="_blank"
+					>Instituto San Carlos</a
+				>
+				de Malagueño, Córdoba, Argentina.
+			</p>
+			<p>
+				Está formado por cinco unidades ecónomicas de negocio llamadas <b
+					>UENs</b
+				>, las cuales son:
+				<b>CRE@R.COM</b>, <b>CONOCIENDO</b>, <b>CREATISOFT</b>, <b>VÍA LIBRE</b>
+				y <b>EDU-VOZ</b>. Dichas unidades están compuestas por estudiantes de
+				sexto año, bajo la supervisión directa de la profesora <b
+					>Nancy Fernández</b
+				>, así como de un staff estudiantil denominado <b>Staff de Apoyo</b>.
+			</p>
+			<p>
+				Desde el año 2000, el MultiCambio se ha transformado para adaptarse a
+				los avances tecnológicos y sociales que han afectado nuestra forma de
+				vivir la educación y el trabajo, buscando brindar una experiencia
+				realista de gestión de organizaciones y la cooperación laboral.
+			</p>
+		</section>
+
+		<section id="units">
+			<h2>CONOCÉ LAS UENs</h2>
+			<p>
+				Actualmente, el MultiCambio cuenta con cinco unidades económicas de
+				negocio (o UENs), cada una dedicada a una actividad particular. Para
+				saber más acerca de ellas, ¡presioná sobre sus logos!
+			</p>
+			<ul>
+				{
+					units.map((unit) => {
+						return (
+							<UnitLogo path={unit.path} icon={unit.icon} title={unit.title} />
+						);
+					})
+				}
+			</ul>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	#logo-multicambio {
+		filter: saturate(0.85);
+		position: relative;
+		left: -1em;
+		width: 18em;
+		height: 12em;
+		object-fit: cover;
+		align-self: center;
+		animation: fadeIn forwards 2s;
+	}
+
+	section {
+		max-width: 28ch;
+		display: flex;
+		flex-direction: column;
+		animation: fadeIn forwards 1s;
+	}
+
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1em;
+		padding: 0;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			transform: translateY(1em);
+			opacity: 0%;
+		}
+
+		100% {
+			transform: translateY(0);
+			opacity: 100%;
+		}
+	}
+
+	@media screen and (min-width: 500px) {
+		#logo-multicambio {
+			width: 24em;
+		}
+
+		section {
+			max-width: 48ch;
+		}
+	}
+
+	@media screen and (min-width: 720px) {
+		section {
+			max-width: 60ch;
+		}
+	}
+</style>

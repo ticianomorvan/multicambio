@@ -1,0 +1,30 @@
+---
+export interface Props {
+  path: string;
+  icon: string;
+  title?: string;
+}
+
+const { path, icon, title = "UEN" } = Astro.props;
+
+const getPath = (raw: string) => `/units/${raw}`;
+---
+
+<a href={getPath(path)}>
+  <li>
+    <img src={icon} alt={title} />
+  </li>
+</a>
+
+<style>
+  img {
+    width: 8em;
+    object-fit: cover;
+    border-radius: 0.5em;
+    transition: transform 0.25s;
+  }
+
+  img:hover {
+    transform: scale(105%);
+  }
+</style>
