@@ -1,8 +1,7 @@
 ---
 layout: ../layouts/UnitLayout.astro
-name: STAFF DE APOYO
 title: Staff de Apoyo
-icon: /staff-apoyo/SA.svg
+icon: staff-apoyo/SA.jpg
 ---
 
 El Staff de Apoyo es una unidad bárbara.

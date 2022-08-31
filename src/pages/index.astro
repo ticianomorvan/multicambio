@@ -1,9 +1,11 @@
 ---
+import type Frontmatter from "../types/frontmatter";
 import Layout from "../layouts/Layout.astro";
-import UnitLogo from "../components/UnitLogo.astro";
+
+const units = await Astro.glob<Frontmatter>("../pages/*.md");
 ---
 
-<Layout title="MultiCambio | Instituto San Carlos">
+<Layout title="Inicio">
 	<main>
 		<section id="presentation">
 			<img
@@ -43,6 +45,21 @@ import UnitLogo from "../components/UnitLogo.astro";
 				negocio (o UENs), cada una dedicada a una actividad particular. Para
 				saber más acerca de ellas, ¡presioná sobre sus logos!
 			</p>
+			<ul>
+				{
+					units.map((unit) => (
+						<li id={unit.frontmatter.title}>
+							<a href={unit.url} target="_self">
+								<img
+									class="unit-logo"
+									src={`/images/${unit.frontmatter.icon}`}
+									alt={`${unit.frontmatter.title}'s logo.`}
+								/>
+							</a>
+						</li>
+					))
+				}
+			</ul>
 		</section>
 	</main>
 </Layout>
@@ -73,6 +90,11 @@ import UnitLogo from "../components/UnitLogo.astro";
 		justify-content: center;
 		gap: 1em;
 		padding: 0;
+	}
+
+	.unit-logo {
+		width: 10em;
+		object-fit: fill;
 	}
 
 	@keyframes fadeIn {

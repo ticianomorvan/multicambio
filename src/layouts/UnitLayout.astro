@@ -1,31 +1,29 @@
 ---
-import Footer from "../components/Footer.astro";
+import type Frontmatter from "../types/frontmatter";
+import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
+
+const properties = frontmatter as Frontmatter;
 ---
 
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{`${frontmatter.title} | MultiCambio`}</title>
-    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
-  </head>
-
-  <body>
+<Layout title={properties.title}>
+  <main>
     <img
       class="unit-logo"
-      src={`/images/${frontmatter.icon}`}
-      alt={`${frontmatter.title}'s logo.'`}
+      src={`/images/${properties.icon}`}
+      alt={`${properties.title}'s logo.'`}
     />
-    <h1>{frontmatter.name}</h1>
+    <h1>{properties.title.toLocaleUpperCase()}</h1>
     <slot />
-    <Footer />
-    <style>
-      .unit-logo {
-        width: 9em;
-      }
-    </style>
-  </body>
-</html>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin-block-start: 1em;
+  }
+  .unit-logo {
+    width: 12em;
+  }
+</style>
