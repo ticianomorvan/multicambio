@@ -1,8 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import UnitLogo from "../components/UnitLogo.astro";
-
-import { units } from "../data/units.json";
 ---
 
 <Layout title="MultiCambio | Instituto San Carlos">
@@ -45,15 +43,6 @@ import { units } from "../data/units.json";
 				negocio (o UENs), cada una dedicada a una actividad particular. Para
 				saber más acerca de ellas, ¡presioná sobre sus logos!
 			</p>
-			<ul>
-				{
-					units.map((unit) => {
-						return (
-							<UnitLogo path={unit.path} icon={unit.icon} title={unit.title} />
-						);
-					})
-				}
-			</ul>
 		</section>
 	</main>
 </Layout>
