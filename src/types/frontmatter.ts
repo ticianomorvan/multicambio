@@ -4,4 +4,7 @@ export default interface Frontmatter {
 
   /** Unit's icon path, following this pattern: unit-name/unit-logo-filename */
   icon: string;
+
+  /** Unit's email, to be used in Contact component. */
+  email: string;
 }

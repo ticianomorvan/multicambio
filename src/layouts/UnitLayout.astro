@@ -1,4 +1,5 @@
 ---
+import Contact from "../components/Contact.astro";
 import type Frontmatter from "../types/frontmatter";
 import Layout from "./Layout.astro";
 
@@ -16,12 +17,13 @@ const properties = frontmatter as Frontmatter;
     />
     <h1>{properties.title.toLocaleUpperCase()}</h1>
     <slot />
+    <Contact email={properties.email} name={properties.title} />
   </main>
 </Layout>
 
 <style>
   main {
-    margin-block-start: 1em;
+    margin: 2em 0;
   }
   .unit-logo {
     width: 12em;

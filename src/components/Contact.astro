@@ -1,0 +1,56 @@
+---
+export interface Props {
+  name: string;
+  email: string;
+}
+
+import { Icon } from "astro-icon";
+
+const { name, email } = Astro.props;
+---
+
+<section>
+  <h2>Contactá con {name}</h2>
+
+  <a href={`mailto:${email}`}>
+    <div>
+      <p>Enviar un correo</p>
+      <Icon name="fluent:send-24-filled" />
+    </div>
+  </a>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div {
+    display: flex;
+    gap: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.15em;
+    padding-inline: 1em;
+    border-radius: 0.25em;
+    width: max-content;
+    background-color: hsl(220, 90%, 40%);
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    transition: background-color 0.25s;
+  }
+
+  div:hover {
+    background-color: hsl(220, 90%, 50%);
+  }
+
+  svg {
+    width: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>
