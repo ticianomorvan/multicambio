@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/UnitLayout.astro
 title: Edu-Voz
-icon: edu-voz/EDUVOZ.jpg
+path: edu-voz
 email: eduvoz.2022@alumnos.isc-mlgo.edu.ar
 ---
 

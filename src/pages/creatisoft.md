@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/UnitLayout.astro
 title: Creatisoft
-icon: creatisoft/CREATISOFT.jpg
+path: creatisoft
 email: creatisoft.2022@alumnos.isc-mlgo.edu.ar
 ---
 

@@ -52,7 +52,7 @@ const units = await Astro.glob<Frontmatter>("../pages/*.md");
 							<a href={unit.url} target="_self">
 								<img
 									class="unit-logo"
-									src={`/images/${unit.frontmatter.icon}`}
+									src={`/images/${unit.frontmatter.path}/${unit.frontmatter.path}-logo.jpg`}
 									alt={`${unit.frontmatter.title}'s logo.`}
 								/>
 							</a>
@@ -68,7 +68,7 @@ const units = await Astro.glob<Frontmatter>("../pages/*.md");
 	#logo-multicambio {
 		filter: saturate(0.85);
 		position: relative;
-		left: -1em;
+		left: -0.75em;
 		width: 18em;
 		height: 12em;
 		object-fit: cover;
@@ -94,7 +94,11 @@ const units = await Astro.glob<Frontmatter>("../pages/*.md");
 
 	.unit-logo {
 		width: 10em;
-		object-fit: fill;
+		transition: transform 0.25s;
+	}
+
+	.unit-logo:hover {
+		transform: scale(105%);
 	}
 
 	@keyframes fadeIn {

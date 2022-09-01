@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/UnitLayout.astro
 title: Cre@r.com
-icon: crear/CREAR.jpg
+path: crear
 email: crear.2022@alumnos.isc-mlgo.edu.ar
 ---
 

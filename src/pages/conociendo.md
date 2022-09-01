@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/UnitLayout.astro
 title: Conociendo
-icon: conociendo/CONOCIENDO.jpg
+path: conociendo
 email: conociendo.2022@alumnos.isc-mlgo.edu.ar
 ---
 

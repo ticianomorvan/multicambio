@@ -10,9 +10,8 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.0.9"
-  },
-  "dependencies": {
+    "@astrojs/image": "^0.4.0",
+    "astro": "^1.0.9",
     "astro-icon": "^0.7.3"
   }
 }

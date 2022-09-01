@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/UnitLayout.astro
 title: Vía libre
-icon: via-libre/VIALIBRE.jpg
+path: via-libre
 email: vialibre.2022@alumnos.isc-mlgo.edu.ar
 ---
 

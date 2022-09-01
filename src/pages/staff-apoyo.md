@@ -1,8 +1,8 @@
 ---
 layout: ../layouts/UnitLayout.astro
 title: Staff de Apoyo
-icon: staff-apoyo/SA.jpg
+path: staff-apoyo
 email: staffapoyo.2022@alumnos.isc-mlgo.edu.ar
 ---
 
-El Staff de Apoyo es una unidad bárbara.
+El Staff de Apoyo es una unidad de gestión administrativa.
