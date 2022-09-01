@@ -1,0 +1,49 @@
+---
+import type ImageFile from "../types/image";
+import { Image } from "@astrojs/image/components";
+
+export interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+
+const pictures = await Astro.glob<ImageFile>("../../public/images/**/*.jpg");
+const unitPictures = pictures.filter((picture) =>
+  picture.default.src.includes(path)
+);
+---
+
+<section>
+  <h2>Galería</h2>
+  <div>
+    {
+      unitPictures.map((picture) => (
+        <Image src={picture.default.src} width={256} height={256} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    text-align: center;
+  }
+
+  div {
+    padding: 1em;
+    display: grid;
+  }
+
+  @media screen and (min-width: 768px) {
+    div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    div {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

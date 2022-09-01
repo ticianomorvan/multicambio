@@ -1,0 +1,41 @@
+---
+import type Frontmatter from "../types/frontmatter";
+import Layout from "./Layout.astro";
+import Pictures from "../components/Pictures.astro";
+import Contact from "../components/Contact.astro";
+
+const { frontmatter } = Astro.props;
+
+const properties = frontmatter as Frontmatter;
+---
+
+<Layout title={properties.title}>
+  <main>
+    <img
+      class="unit-logo"
+      src={`/images/${properties.path}/${properties.path}-logo.jpg`}
+      alt={`${properties.title}'s logo.'`}
+    />
+    <h1>{properties.title.toLocaleUpperCase()}</h1>
+    <div id="content">
+      <slot />
+    </div>
+    <Pictures path={properties.path} />
+    <Contact email={properties.email} name={properties.title} />
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: 2em 0;
+  }
+
+  .unit-logo {
+    width: 12em;
+  }
+
+  #content {
+    margin: 0em 1.5em;
+    max-width: 72ch;
+  }
+</style>

@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/solid-js": "^1.0.0",
+    "@astrojs/image": "^0.4.0",
     "astro": "^1.0.9",
-    "solid-js": "^1.4.3"
+    "astro-icon": "^0.7.3"
   }
 }

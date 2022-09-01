@@ -1,11 +1,11 @@
 ---
+import type Frontmatter from "../types/frontmatter";
 import Layout from "../layouts/Layout.astro";
-import UnitLogo from "../components/UnitLogo.astro";
 
-import { units } from "../data/units.json";
+const units = await Astro.glob<Frontmatter>("../pages/*.md");
 ---
 
-<Layout title="MultiCambio | Instituto San Carlos">
+<Layout title="Inicio">
 	<main>
 		<section id="presentation">
 			<img
@@ -47,11 +47,17 @@ import { units } from "../data/units.json";
 			</p>
 			<ul>
 				{
-					units.map((unit) => {
-						return (
-							<UnitLogo path={unit.path} icon={unit.icon} title={unit.title} />
-						);
-					})
+					units.map((unit) => (
+						<li id={unit.frontmatter.title}>
+							<a href={unit.url} target="_self">
+								<img
+									class="unit-logo"
+									src={`/images/${unit.frontmatter.path}/${unit.frontmatter.path}-logo.jpg`}
+									alt={`${unit.frontmatter.title}'s logo.`}
+								/>
+							</a>
+						</li>
+					))
 				}
 			</ul>
 		</section>
@@ -62,7 +68,7 @@ import { units } from "../data/units.json";
 	#logo-multicambio {
 		filter: saturate(0.85);
 		position: relative;
-		left: -1em;
+		left: -0.75em;
 		width: 18em;
 		height: 12em;
 		object-fit: cover;
@@ -84,6 +90,15 @@ import { units } from "../data/units.json";
 		justify-content: center;
 		gap: 1em;
 		padding: 0;
+	}
+
+	.unit-logo {
+		width: 10em;
+		transition: transform 0.25s;
+	}
+
+	.unit-logo:hover {
+		transform: scale(105%);
 	}
 
 	@keyframes fadeIn {
