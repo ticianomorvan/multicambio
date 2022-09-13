@@ -14,8 +14,8 @@ const { frontmatter } = Astro.props;
     <Image
       src={frontmatter.icon}
       alt={`${frontmatter.name}'s icon.`}
-      height="200px"
-      aspectRatio="3:4"
+      width={250}
+      aspectRatio="1:1"
     />
     <slot />
   </main>
