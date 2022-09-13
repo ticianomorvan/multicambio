@@ -1,0 +1,16 @@
+---
+type Props = {
+  url: string;
+  title: string;
+};
+
+const { url, title } = Astro.props;
+---
+
+<div
+  class="transition duration-150 p-2 bg-blue-100 w-max rounded-lg hover:bg-blue-300 hover:cursor-pointer"
+>
+  <a href={url}>
+    {title}
+  </a>
+</div>

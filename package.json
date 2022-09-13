@@ -13,5 +13,9 @@
     "@astrojs/image": "^0.4.0",
     "astro": "^1.2.3",
     "astro-icon": "^0.7.3"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^1.0.1",
+    "@fontsource/jost": "^4.5.11"
   }
 }
