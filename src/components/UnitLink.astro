@@ -1,16 +1,25 @@
 ---
+import { Image } from "@astrojs/image/components";
+import { parseIconURL } from "../lib/utils";
+
 type Props = {
   url: string;
   title: string;
+  icon: string;
 };
 
-const { url, title } = Astro.props;
+const { url, title, icon } = Astro.props;
 ---
 
-<div
-  class="transition duration-150 p-2 bg-blue-100 w-max rounded-lg hover:bg-blue-300 hover:cursor-pointer"
+<li
+  class="transition duration-150 w-max shadow-lg shadow-gray-300 p-2 rounded-lg hover:cursor-pointer"
 >
   <a href={url}>
-    {title}
+    <Image
+      src={parseIconURL(icon)}
+      alt={`${title}'s icon.'`}
+      width={228}
+      aspectRatio="1:1"
+    />
   </a>
-</div>
+</li>

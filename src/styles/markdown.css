@@ -1,0 +1,35 @@
+.markdown-container {
+  @apply flex flex-col w-[72ch]
+}
+
+.markdown-container h1 {
+  @apply text-5xl py-4 font-bold
+}
+
+.markdown-container h2 {
+  @apply text-4xl py-3 font-semibold
+}
+
+.markdown-container h3 {
+  @apply text-3xl py-2
+}
+
+.markdown-container h4 {
+  @apply text-2xl py-1
+}
+
+.markdown-container h5 {
+  @apply text-xl
+}
+
+.markdown-container p {
+  @apply text-lg py-0.5
+}
+
+.markdown-container a {
+  @apply text-blue-700
+}
+
+.unit-logo {
+  @apply m-auto
+}

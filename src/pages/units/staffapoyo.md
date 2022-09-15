@@ -1,8 +1,7 @@
 ---
 layout: "../../layouts/UnitLayout.astro"
 name: "Staff de Apoyo"
-icon: "https://imgur.com/KOjZlxd.jpg"
-activity_year: 2022
+icon: "https://imgur.com/77Gb6gA"
 ---
 
 # STAFF DE APOYO

@@ -2,7 +2,12 @@
 import type { MarkdownLayoutProps } from "astro";
 import type Frontmatter from "../types/frontmatter";
 import { Image } from "@astrojs/image/components";
+import { parseIconURL } from "../lib/utils";
+
 import BaseLayout from "./BaseLayout.astro";
+import Back from "../components/Back.astro";
+
+import "../styles/markdown.css";
 
 type Props = MarkdownLayoutProps<Frontmatter>;
 
@@ -10,13 +15,17 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.name}>
-  <main>
-    <Image
-      src={frontmatter.icon}
-      alt={`${frontmatter.name}'s icon.`}
-      width={250}
-      aspectRatio="1:1"
-    />
+  <main class="markdown-container">
+    <Back />
+    <span class="unit-logo">
+      <Image
+        src={parseIconURL(frontmatter.icon)}
+        alt={`${frontmatter.name}'s icon.`}
+        width={300}
+        aspectRatio="1:1"
+        draggable="false"
+      />
+    </span>
     <slot />
   </main>
 </BaseLayout>

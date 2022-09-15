@@ -5,14 +5,13 @@ import multicambioLogo from "../../public/images/MC-LOGO.jpg";
 
 // Astro Components
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Text from "../components/Text.astro";
 import UnitLink from "../components/UnitLink.astro";
 
 const units = await Astro.glob<Frontmatter>("./units/*.md");
 ---
 
 <BaseLayout title="Inicio">
-  <main class="w-[72ch] flex flex-col items-center">
+  <main class="w-[72ch] flex flex-col gap-4 items-center">
     <Image
       src={multicambioLogo}
       alt="MultiCambio's logo"
@@ -21,40 +20,51 @@ const units = await Astro.glob<Frontmatter>("./units/*.md");
       height={228}
       draggable={false}
     />
-    <Text>
+    <p>
       El <b>MultiCambio</b> es un proyecto institucional del colegio secundario
       <a href="https://isc-mlgo.edu.ar" target="_blank">Instituto San Carlos</a>
       de Malagueño, Córdoba, Argentina.
-    </Text>
-    <Text>
-      Es una empresa proveedora de servicios de comunicación que está pensada para interrelacionar a la institución con la comunidad en general.
-      Está formado por cinco unidades ecónomicas de negocio llamadas <b>UENs</b
-      >, las cuales son:
-      <b>CRE@R.COM</b>, agencia de sitios web; <b>CONOCIENDO</b>, agencia audiovisual; <b>CREATISOFT</b>, agencia de diseño; <b>VÍA LIBRE</b>, agencia radial y
-      y <b>EDU-VOZ</b>, agencia de prensa escrita. Dichas unidades están compuestas por estudiantes de
-      sexto año, bajo la supervisión directa de la profesora <b
-        >Nancy Fernández</b
-      >, con la ayuda de un <b>Staff de Apoyo</b> estudiantil.
-    </Text>
-    <Text>
+    </p>
+    <p>
+      Es una empresa proveedora de servicios de comunicación que está pensada
+      para interrelacionar a la institución con la comunidad en general. Está
+      formado por cinco unidades ecónomicas de negocio llamadas <b>UENs</b>, las
+      cuales son:
+      <b>CRE@R.COM</b>, agencia de sitios web; <b>CONOCIENDO</b>, agencia
+      audiovisual; <b>CREATISOFT</b>, agencia de diseño; <b>VÍA LIBRE</b>,
+      agencia radial y y <b>EDU-VOZ</b>, agencia de prensa escrita. Dichas
+      unidades están compuestas por estudiantes de sexto año, bajo la
+      supervisión directa de la profesora <b>Nancy Fernández</b>, con la ayuda
+      de un <b>Staff de Apoyo</b> estudiantil.
+    </p>
+    <p>
       Desde el año 2000, el MultiCambio se ha transformado para adaptarse a los
       avances tecnológicos y sociales que han afectado nuestra forma de vivir la
       educación y el trabajo, buscando brindar una experiencia realista de
-      gestión de organizaciones y la cooperación laboral a través del uso de las TICs.
-    </Text>
-    <section class="my-4">
-      <h2 class="text-2xl font-bold">CONOCÉ LAS UENs</h2>
-      <Text>
-        Actualmente, el MultiCambio cuenta con cinco unidades económicas de
-        negocio (o UENs), cada una dedicada a una actividad particular. Para
-        saber más acerca de ellas, ¡presioná sobre sus logos!
-      </Text>
+      gestión de organizaciones y la cooperación laboral a través del uso de las
+      TICs.
+    </p>
+    <section class="flex flex-col gap-4">
+      <div>
+        <h2 class="text-2xl pb-2 font-bold">CONOCÉ LAS UENs</h2>
+        <p>
+          Actualmente, el MultiCambio cuenta con cinco unidades económicas de
+          negocio (o UENs), cada una dedicada a una actividad particular. Para
+          saber más acerca de ellas, ¡presioná sobre sus logos!
+        </p>
+      </div>
 
-      {
-        units.map((unit) => (
-          <UnitLink url={unit.url!} title={unit.frontmatter.name} />
-        ))
-      }
+      <ul class="grid columns-3">
+        {
+          units.map((unit) => (
+            <UnitLink
+              url={unit.url!}
+              title={unit.frontmatter.name}
+              icon={unit.frontmatter.icon}
+            />
+          ))
+        }
+      </ul>
     </section>
   </main>
 </BaseLayout>
