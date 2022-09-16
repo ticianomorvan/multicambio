@@ -11,14 +11,12 @@ type Props = {
 const { url, title, icon } = Astro.props;
 ---
 
-<li
-  class="transition duration-150 w-max shadow-lg shadow-gray-300 p-2 rounded-lg hover:cursor-pointer"
->
+<li class="transition duration-150 w-max p-2 rounded-lg hover:cursor-pointer">
   <a href={url}>
     <Image
       src={parseIconURL(icon)}
       alt={`${title}'s icon.'`}
-      width={228}
+      width={150}
       aspectRatio="1:1"
     />
   </a>

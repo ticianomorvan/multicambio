@@ -1,21 +1,25 @@
 .markdown-container {
-  @apply flex flex-col w-[72ch]
+  @apply flex flex-col w-5/6 lg:w-[72ch]
+}
+
+.markdown-container h1, h2, h3, h4, h5 {
+  @apply text-center my-4 lg:text-left
 }
 
 .markdown-container h1 {
-  @apply text-5xl py-4 font-bold
+  @apply text-5xl font-bold
 }
 
 .markdown-container h2 {
-  @apply text-4xl py-3 font-semibold
+  @apply text-4xl
 }
 
 .markdown-container h3 {
-  @apply text-3xl py-2
+  @apply text-3xl
 }
 
 .markdown-container h4 {
-  @apply text-2xl py-1
+  @apply text-2xl
 }
 
 .markdown-container h5 {
@@ -28,6 +32,22 @@
 
 .markdown-container a {
   @apply text-blue-700
+}
+
+.markdown-container img {
+  @apply max-h-64 py-4 m-auto
+}
+
+.markdown-container .gallery {
+  @apply flex flex-wrap gap-x-2
+}
+
+.markdown-container ul {
+  @apply w-4/5 m-auto list-disc text-left
+}
+
+.markdown-container li {
+  @apply my-2
 }
 
 .unit-logo {

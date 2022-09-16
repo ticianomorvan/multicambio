@@ -7,9 +7,9 @@ icon: "https://imgur.com/schBxtQ"
 # EDU-VOZ
 
 **¡NOSOTROS SOMOS EDU-VOZ!**
- 
+
 Pertenecemos a la agencia de prensa escrita dedicada a la redacción de artículos de impacto educativo y de interés general.
- 
+
 Nuestras diferentes producciones son: Plantillas educativas, Programas de Ayuda Escolar (PAE), Noticias semanales y Gacetillas Virtuales.
 
 ## Producciones
@@ -24,17 +24,19 @@ Es una revista virtual que tiene el objetivo de informar a través de artículos
 
 Son imágenes educativas que brindan una ayuda más centrada en un solo tema determinado.
 
-![Foto de una plantilla educativa en español](https://i.imgur.com/PTzOkAY.jpeg)
-
-![Foto de una plantilla educativa en inglés](https://i.imgur.com/TjCYj3D.jpeg )
+<div class="gallery">
+  <img src="https://i.imgur.com/PTzOkAY.jpeg" alt="Foto de una plantilla educativa en español">
+  <img src="https://i.imgur.com/TjCYj3D.jpeg" alt="Foto de una plantilla educativa en inglés">
+</div>
 
 ### PAE (Programa de ayuda escolar)
 
 Son presentaciones que desarrollan un tema específico de una determinada materia.
 
-![Foto de un PAE para el ciclo básico](https://i.imgur.com/tdoTRon.jpeg)
-
-![Foto de un PAE para el ciclo orientado](https://i.imgur.com/C3WNfZ4.jpeg)
+<div class="gallery">
+  <img src="https://i.imgur.com/tdoTRon.jpeg" alt="Foto de un PAE para el ciclo básico">
+  <img src="https://i.imgur.com/C3WNfZ4.jpeg" alt="Foto de un PAE para el ciclo orientado">
+</div>
 
 ### Informáte (Noticia de la semana)
 
