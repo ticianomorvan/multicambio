@@ -7,7 +7,7 @@
 }
 
 .markdown-container h1 {
-  @apply text-5xl font-bold
+  @apply text-5xl
 }
 
 .markdown-container h2 {

@@ -8,7 +8,7 @@ icon: "https://imgur.com/77Gb6gA"
 
 Es una unidad de soporte administrativo que actúa como intermediaria entre la profesora a cargo del proyecto y los integrantes de las UENs. Está conformado por dos estudiantes que no participan de otra unidad y brindan servicios de gestión.
 
-En el año 2022 está integrada por **Basualdo, Lourdes** y **Morvan, Ticiano**.
+En el año 2022 está integrada por Basualdo, Lourdes y Morvan, Ticiano.
 
 ![Equipo de trabajo](https://i.imgur.com/WLeIru4.jpg)
 
