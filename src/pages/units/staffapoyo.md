@@ -47,7 +47,11 @@ Son identificaciones personales de cada integrante del MultiCambio, que contiene
 
 ## Distribución del RR.HH.
 
+![Organigrama del Staff de Apoyo](https://i.imgur.com/BmsUuKC.png)
+
 El S.A., debido a su escasa cantidad de integrantes, no presenta agrupación por especialidad de su RR.HH. A pesar de esto, si se genera un ambiente de trabajo colaborativo donde se hace uso de la división del trabajo para mejorar la eficiencia de la unidad.
+
+Para corregir y evaluar a las unidades, se las reparta equitativamente en dos grupos. Uno formado por "las tres C" (Crear, Conociendo y Creatisoft) y otro por Edu-Voz, Vía Libre y el Staff de Apoyo. Esta división se utiliza para enfocar los esfuerzos de ambos integrantes en unidades en particular, por lo que una vez designadas son evaluadas en su mayoría por una persona, a menos que sea necesaria una cooperación.
 
 ## Perfil de la UENs
 
